@@ -1,4 +1,15 @@
 import App from './App.svelte';
+import { initPathRouter } from '@bjornlu/svelte-router';
+import Home from './pages/Home.svelte';
+import About from './pages/About.svelte';
+import Product from './pages/Product.svelte';
+
+
+initPathRouter([
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/product', component: Product }
+])
 
 let app = new App({
   target: document.body,
